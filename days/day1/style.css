@@ -1,0 +1,196 @@
+:root {
+    --background-color: #FCFCFE;
+    --title-color: #1E202B;
+    --subtitle-color: #898DA1;
+    --primary-color: #3D63DD;
+    --separatorBorder-color: #D6D9E6;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 400;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    min-width: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: grid;
+    background-color: var(--background-color);
+}
+
+.card{
+    place-self: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0, 0.1);
+    border-radius: 8px;
+    max-width: 50%;
+    overflow-x: hidden;
+
+    @media screen and (min-width: 968px) and (max-width: 1199px) {
+        max-width: 30%;
+    }
+
+    @media screen and (min-width: 1200px){
+        max-width: 25%;
+    }
+
+
+    >header{
+        min-height: 180px;
+        position: relative;
+        >img{
+            position: absolute;
+            z-index: 50;
+            left: 50%;
+            top: 40%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            max-width: 96px;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    >section{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 24px 24px 24px;
+        >hgroup{
+            text-align: center;
+            line-height: 150%;
+
+            >h1{
+                font-size: 24px;
+                font-weight: 600;
+                color: var(--title-color);
+            }
+
+            >h2{
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--subtitle-color);
+            }
+        }
+
+        >p{
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        >div{
+            gap: 12px;
+
+            >button{
+                padding: 8px 16px;
+                border-radius: 30px;
+
+                cursor: pointer;
+                font-size: 14px;
+                transition: 0.3s;
+
+                >a{
+                    font-weight: 500;
+                }
+
+                &:hover{
+                    transform: translateY(-2px);
+                    filter: brightness(0.97);
+                }
+
+                &:first-child{
+                    background-color: var(--primary-color);
+                    >a{
+                        color: #fff;
+                    }
+                }
+
+                &:last-child{
+                    background-color: white;
+                    border: 1px solid var(--separatorBorder-color);
+
+                    >a{
+                        color: var(--subtitle-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.centerFlex{
+    display: flex;
+    justify-content: center;
+}
+
+.waveGroup{
+    position: relative;
+    width: 100%;
+
+    >img{
+        position: absolute;
+        width: 800px;
+        margin: 0 auto;
+
+        /*darkwave*/
+        &:nth-child(1){ 
+            animation: waveAnimation 40s infinite ease-in-out;
+            transform: rotate(180deg);
+            z-index: 10;
+        }
+        /*mediumWave*/
+        &:nth-child(2){
+            animation: waveAnimation 30s infinite ease-in-out;
+            z-index: 30;
+        }
+        /*lightwave*/
+        &:nth-child(3){
+            animation: waveAnimation 35s infinite ease-in-out;
+            z-index: 20;
+        }
+
+    }
+}
+
+.socialMedia{
+    gap: 16px;
+
+    >li{
+        transition: 0.3s;
+        cursor: pointer;
+        
+        >a{ 
+            transition: 0.3s;
+            color: var(--subtitle-color);
+        }
+        &:hover{
+            transform: translateY(-2px) scale(1.05);
+            >a{
+                color: var(--primary-color);
+            }
+          
+        }
+    }
+}
+
+@keyframes waveAnimation {
+    0% {
+      transform: translateX(0) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(180deg);
+    }
+  }
+
+
+
