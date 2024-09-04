@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>Product Page</title>
+</head>
+
+<body>
+    <script src="./script.js"></script>
+    <main>
+        <section class="imageContainer">
+            <img src="https://imgnike-a.akamaihd.net/1920x1920/022104IDA4.jpg" alt="Tênis Nike" id="mainImage" />
+            <ul>
+                <li onmouseenter="setPrincipalImage(this)" aria-label="Visualizar imagem alternativa 2">
+                    <img src="https://imgnike-a.akamaihd.net/1920x1920/022104IDA2.jpg" alt="Tênis Nike ângulo 2" />
+                </li>
+                <li onmouseenter="setPrincipalImage(this)" aria-label="Visualizar imagem alternativa 3">
+                    <img src="https://imgnike-a.akamaihd.net/1920x1920/022104IDA9.jpg" alt="Tênis Nike ângulo 3" />
+                </li>
+                <li onmouseenter="setPrincipalImage(this)" aria-label="Visualizar imagem alternativa 4">
+                    <img src="https://imgnike-a.akamaihd.net/1920x1920/022104IDA1.jpg" alt="Tênis Nike ângulo 4" />
+                </li>
+            </ul>
+        </section>
+        <section class=" textContainer">
+            <header>
+                <hgroup class="productTitle">
+                    <h2>nike Revolution</h2>
+                    <h1>Tênis Nike Revolution 6 FlyEase Next Nature Feminino</h1>
+                </hgroup>
+                <p>
+                    Baixe o Nike App e ganhe 5% de desconto com o cupom PRIMEIRACOMPRA, na primeira compra feita no app
+                </p>
+            </header>
+            <article class="productPrice">
+                <div>
+                    <p>R$ 99,00</p>
+                    <mark>-25%</mark>
+                </div>
+                <del>R$ 132,00</del>
+            </article>
+            <article class="sizeList">
+                <h3>Tamanho</h3>
+                <ul>
+                    <li><button onclick="selectSize(this)" data-size="S" aria-label="Selecionar tamanho S">S</button>
+                    </li>
+                    <li><button onclick="selectSize(this)" data-size="M" aria-label="Selecionar tamanho M">M</button>
+                    </li>
+                    <li><button onclick="selectSize(this)" data-size="L" aria-label="Selecionar tamanho L">L</button>
+                    </li>
+                    <li><button onclick="selectSize(this)" data-size="XL" aria-label="Selecionar tamanho XL">XL</button>
+                    </li>
+                    <li><button onclick="selectSize(this)" data-size="XXL"
+                            aria-label="Selecionar tamanho XXL">XXL</button></li>
+                </ul>
+            </article>
+            <button class="button">Adicionar ao Carrinho</button>
+        </section>
+    </main>
+</body>
+
+</html>
