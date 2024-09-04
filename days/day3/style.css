@@ -1,0 +1,135 @@
+:root{
+    --background-color: #FCFCFE;
+    --subtitle-color: #898DA1;
+    --text-color: #1E202B;
+    --border-color: #EEF0F7;
+}
+
+
+
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;;
+    max-height: 100vh;;
+}
+
+main{
+    max-width: 375px;
+    max-height: 667px;
+    min-width: 375px;
+    min-height: 667px;
+    overflow: hidden;
+    border-radius: 35px;
+    padding: 24px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+#generalList, #settingsList{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 12px;
+    border-top: 2px solid var(--border-color);
+
+    >li{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+
+        >i:first-child{
+            background-color: #EDF2FE;
+            border-radius: 5px;
+            font-weight: 400;
+            padding: 4px;
+            color: var(--text-color);
+        }
+        
+        >a{
+            color: var(--text-color);
+            font-size: 14px;
+            font-weight: 700;
+            flex: 1;
+        }
+    }
+}
+
+#settingsList{
+    margin-top: 0px;
+}
+
+.profileHeader{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    padding-top: 0;
+
+    >img{
+        width: 56px;
+        border-radius: 15px;
+        aspect-ratio: 1/1;
+    }
+
+    >hgroup{
+        line-height: 150%;
+
+        >h1{
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        >h2{
+            font-size: 12px;
+            color: var(--subtitle-color);
+            font-weight: 600;
+        }
+    }
+}
+
+.navbarList{
+    display: flex;
+    justify-content: space-between;
+
+    >li{
+        cursor: pointer;
+
+        >i{
+            font-size: 28px;
+            background-color: transparent;
+            font-weight: 300;
+            padding: 4px;
+            border-radius: 5px;
+            color: var(--subtitle-color);
+        }
+
+        &:last-child{
+            >i{
+                background-color: #F7F9FF;
+                color: #3D63DD !important;
+            }
+        }
+    }
+}
+
+.navbar{
+    border-top:1px solid var(--border-color);
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    left: 0;
+    right: 0;
+}
