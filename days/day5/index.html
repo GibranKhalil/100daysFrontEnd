@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Image Carrousel</title>
+</head>
+
+<body>
+    <main>
+        <section id="mainImageSection">
+            <button onclick="handleClickPrevButton()" id="leftButton" class="carrouselButton">
+                <i class="material-symbols-rounded">
+                    arrow_back
+                </i>
+            </button>
+            <img id="mainImage" src="https://imgnike-a.akamaihd.net/1920x1920/0287397TA8.jpg" alt="Slide em foco" />
+            <button onclick="handleClickNextButton()" id="rightButton" class="carrouselButton">
+                <i class="material-symbols-rounded">
+                    arrow_forward
+                </i>
+            </button>
+        </section>
+        <ul id="imageList">
+        </ul>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
