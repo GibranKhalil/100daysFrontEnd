@@ -1,0 +1,140 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body,
+main ul,
+main ul li {
+    display: flex;
+}
+
+body,
+main ul {
+    flex-direction: column;
+}
+
+body {
+    background-color: #edf2fe;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+header,
+main {
+    width: 70%;
+}
+
+header {
+    > hgroup {
+        > h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        > h2 {
+            margin-top: 4px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+main {
+    > ul {
+        gap: 12px;
+
+        > li {
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            gap: 24px;
+            align-items: center;
+            transition: 0.3s;
+            cursor: pointer;
+
+            > article {
+                width: 100px;
+                padding: 4px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                aspect-ratio: 3/2;
+                text-align: center;
+
+                > p {
+                    font-size: 12px;
+                    margin-bottom: 4px;
+                    font-weight: 500;
+                }
+
+                > time {
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+            }
+
+            > hgroup {
+                flex: 1;
+                > h3 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                }
+
+                > h4 {
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            > button {
+                margin-left: 24px;
+                background-color: #000;
+                color: #fff;
+                border-radius: 10px;
+                padding: 14px 24px;
+                text-wrap: nowrap;
+                cursor: pointer;
+            }
+        }
+
+        > li:first-child {
+            > article {
+                background-color: #e7acd0;
+            }
+        }
+
+        > li:nth-child(2) {
+            > article {
+                background-color: #bdd1ff;
+            }
+        }
+
+        > li:nth-child(3) {
+            > article {
+                background-color: #c4f7df;
+            }
+        }
+
+        > li:nth-child(4) {
+            > article {
+                background-color: #f5cefd;
+            }
+        }
+
+        > li:hover {
+            transform: scale(1.025) translateY(-4px);
+        }
+    }
+}
+
+.soldOutButton {
+    background-color: transparent;
+    color: #000;
+    font-weight: 600;
+}
