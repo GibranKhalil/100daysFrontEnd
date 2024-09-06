@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Password Generator</title>
+</head>
+
+<body class="flex">
+    <main>
+        <h1 id="title">Gerador de Senha</h1>
+        <section class="section flex column">
+            <h2>Senha gerada</h2>
+            <article class="flex input">
+                <input disabled class="flex1" placeholder="Gere sua senha" id="generatedPWD" />
+                <i onclick="copyPassword()" class="material-symbols-rounded">
+                    content_copy
+                </i>
+            </article>
+        </section>
+
+        <form class="section flex column" oninput="length.value=parseInt(range.value)"
+            oninput="length.value=parseInt(range.value)">
+            <header class="flex">
+                <h2 class="flex1">Quantidade de Caracteres</h2>
+                <output id="output" name="length">12</output>
+            </header>
+            <article class="flex input">
+                <p>12</p>
+                <input class="flex1" id="charLength" name="range" value="12" type="range" min="12" max="32" />
+                <p>32</p>
+            </article>
+        </form>
+
+        <section class="section flex column">
+            <h2>Configurações</h2>
+            <ul class="flex column">
+                <li>
+                    <article class="flex input">
+                        <p class="flex1">Incluir letras maíusculas</p>
+                        <label for="upperCase" class="toogle">
+                            <input id="upperCase" type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex input">
+                        <p class="flex1">Incluir letras mínusculas</p>
+                        <label for="lowerCase" class="toogle">
+                            <input id="lowerCase" type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex input">
+                        <p class="flex1">Incluir números</p>
+                        <label for="numbers" class="toogle">
+                            <input id="numbers" type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex input">
+                        <p class="flex1">Incluir símbolos</p>
+                        <label for="signs" class="toogle">
+                            <input id="signs" type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <button onclick="generatePassword()" type="button">
+            Gerar Senha
+        </button>
+    </main>
+    <dialog id="modal">
+        Pelo menos uma opção deve ser selecionada
+    </dialog>
+    <script src="./script.js"></script>
+</body>
