@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>Create Account</title>
+</head>
+
+<body>
+    <main>
+        <hgroup>
+            <h1>Crie uma nova conta</h1>
+            <h2>comece sem pagar nada</h2>
+        </hgroup>
+
+        <form method="post">
+            <div class="inputGroup">
+                <label for="nameInput">Nome</label>
+                <input name="name" id="nameInput" type="text" placeholder="Digite seu nome" />
+            </div>
+            <div class="inputGroup">
+                <label for="lastnameInput">Sobrenome</label>
+                <input name="lastname" id="lastnameInput" type="text" placeholder="Digite seu sobrenome" />
+            </div>
+            <div class="inputGroup">
+                <label for="emailInput">E-mail</label>
+                <input name="email" id="emailInput" type="email" placeholder="email@example.com" />
+            </div>
+            <div class="inputGroup">
+                <label for="pwd">Senha</label>
+                <input name="password" id="pwd" type="password" placeholder="Informe sua senha" />
+            </div>
+            <legend>Você já tem uma conta ? <mark><a>Faça login</a></mark></legend>
+
+            <button>Criar conta</button>
+        </form>
+    </main>
+</body>

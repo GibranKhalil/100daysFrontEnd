@@ -1,0 +1,133 @@
+* {
+    font-family: 'SUSE', sans-serif;
+}
+
+body {
+    background: rgb(61, 99, 221);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(61, 99, 221, 1) 60%,
+        rgba(29, 46, 92, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(61, 99, 221, 1) 60%,
+        rgba(29, 46, 92, 1) 100%
+    );
+    background: linear-gradient(
+        180deg,
+        rgba(61, 99, 221, 1) 60%,
+        rgba(29, 46, 92, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d63dd",endColorstr="#1d2e5c",GradientType=1);
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+main {
+    padding: 96px;
+    background-color: #f9f9fb;
+    height: 100vh;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > hgroup {
+        line-height: 36px;
+        display: flex;
+        flex-direction: column-reverse;
+        > h1 {
+            font-size: 36px;
+            font-weight: 800;
+        }
+        > h2 {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            color: #b4b4b4;
+        }
+    }
+
+    > form {
+        margin: 48px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        min-width: 450px;
+
+        > .inputGroup:nth-child(3),
+        .inputGroup:nth-child(4) {
+            min-width: 100%;
+        }
+
+        > legend {
+            font-size: 18px;
+            margin: 12px 0 0 0;
+            color: #8b8d98;
+            font-weight: 600;
+
+            > mark {
+                > a {
+                    color: #3d63dd;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        filter: brightness(1.1);
+                    }
+                }
+            }
+        }
+
+        > button {
+            min-width: 100%;
+            background-color: #3d63dd;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            margin: 24px 0 0 0;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            text-transform: capitalize;
+
+            &:hover {
+                filter: brightness(1.09);
+            }
+        }
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #edf2fe;
+    border-radius: 6px;
+    padding: 6px 12px;
+    gap: 4px;
+
+    > label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #b9bbc6;
+    }
+
+    > input {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1e1f24;
+        &::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: normal;
+        }
+
+        &[type='password'] {
+            letter-spacing: 6px;
+        }
+    }
+}
